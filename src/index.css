@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --animate-fade-in-down: fade-in-down 0.2s ease-out;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --color-zion-navy: #0a2a5e;
+  --color-zion-navy-dark: #071e44;
+  --color-zion-blue: #1a6fb5;
+  --color-zion-orange: #ff8a00;
+  --color-zion-orange-dark: #e67a00;
+  --color-zion-green: #7fbf1c;
+  --color-zion-green-dark: #5f9a0e;
+  --color-zion-cream: #fff9f2;
+  --color-zion-sand: #f6e4cf;
+  --color-zion-muted: #d9c4aa;
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+  background: #071e44;
+  color: #0a2a5e;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #ff8a00;
+  color: white;
+}
+
+/* thin elegant scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #071e44;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff8a00, #7fbf1c);
+  border-radius: 8px;
+  border: 2px solid #071e44;
+}
+
+.serif-italic {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* slow zoom for hero video poster fallback */
+@keyframes slow-pan {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
